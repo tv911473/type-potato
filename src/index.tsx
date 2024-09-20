@@ -38,6 +38,7 @@ const router = createBrowserRouter(
       />
     </Route>,
   ),
+  { basename: "/type-potato" },
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
