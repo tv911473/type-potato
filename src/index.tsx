@@ -9,7 +9,9 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom"
-import MyForm from "./components/Login"
+import Login from "./components/Login"
+import MyInfo from "./components/MyInfo"
+import MyForm from "./components/MyForm"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,16 +20,21 @@ const router = createBrowserRouter(
       element={<App />}
     >
       <Route
+        path="login"
+        element={<Login />}
+      />
+      <Route
         path="form"
         element={<MyForm />}
       />
       <Route
         path="extra"
-        element={<h1>Extra</h1>}
-      />
-      <Route
-        path="contact"
-        element={<h1>Contact</h1>}
+        element={
+          <MyInfo
+            name={"Taavi"}
+            hobbies={["biking", "hiking", "camping"]}
+          />
+        }
       />
     </Route>,
   ),
