@@ -4,7 +4,7 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -13,7 +13,7 @@ import Login from "./components/Login"
 import MyInfo from "./components/MyInfo"
 import MyForm from "./components/MyForm"
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route
       path="/"
@@ -38,7 +38,6 @@ const router = createBrowserRouter(
       />
     </Route>,
   ),
-  { basename: "/type-potato" },
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
